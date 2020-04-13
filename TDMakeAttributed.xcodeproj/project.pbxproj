@@ -10,6 +10,14 @@
 		EB85FCB7243E04FC001C4F84 /* TDMakeAttributed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB85FCAD243E04FC001C4F84 /* TDMakeAttributed.framework */; };
 		EB85FCBC243E04FC001C4F84 /* TDMakeAttributedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB85FCBB243E04FC001C4F84 /* TDMakeAttributedTests.m */; };
 		EB85FCBE243E04FC001C4F84 /* TDMakeAttributed.h in Headers */ = {isa = PBXBuildFile; fileRef = EB85FCB0243E04FC001C4F84 /* TDMakeAttributed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB85FCF1243E0645001C4F84 /* NSString+TDMakeAttributed.h in Headers */ = {isa = PBXBuildFile; fileRef = EB85FCEF243E0645001C4F84 /* NSString+TDMakeAttributed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB85FCF2243E0645001C4F84 /* NSString+TDMakeAttributed.m in Sources */ = {isa = PBXBuildFile; fileRef = EB85FCF0243E0645001C4F84 /* NSString+TDMakeAttributed.m */; };
+		EB85FCF9243E07A4001C4F84 /* TDMAttributeMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = EB85FCF7243E07A4001C4F84 /* TDMAttributeMaker.h */; };
+		EB85FCFA243E07A4001C4F84 /* TDMAttributeMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = EB85FCF8243E07A4001C4F84 /* TDMAttributeMaker.m */; };
+		EB85FCFD243E0A96001C4F84 /* TDMAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = EB85FCFB243E0A96001C4F84 /* TDMAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB85FCFE243E0A96001C4F84 /* TDMAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = EB85FCFC243E0A96001C4F84 /* TDMAttribute.m */; };
+		EB85FD01243E0B35001C4F84 /* TDMStringAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = EB85FCFF243E0B35001C4F84 /* TDMStringAttribute.h */; };
+		EB85FD02243E0B35001C4F84 /* TDMStringAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = EB85FD00243E0B35001C4F84 /* TDMStringAttribute.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +37,14 @@
 		EB85FCB6243E04FC001C4F84 /* TDMakeAttributedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDMakeAttributedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB85FCBB243E04FC001C4F84 /* TDMakeAttributedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDMakeAttributedTests.m; sourceTree = "<group>"; };
 		EB85FCBD243E04FC001C4F84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB85FCEF243E0645001C4F84 /* NSString+TDMakeAttributed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+TDMakeAttributed.h"; sourceTree = "<group>"; };
+		EB85FCF0243E0645001C4F84 /* NSString+TDMakeAttributed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+TDMakeAttributed.m"; sourceTree = "<group>"; };
+		EB85FCF7243E07A4001C4F84 /* TDMAttributeMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDMAttributeMaker.h; sourceTree = "<group>"; };
+		EB85FCF8243E07A4001C4F84 /* TDMAttributeMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDMAttributeMaker.m; sourceTree = "<group>"; };
+		EB85FCFB243E0A96001C4F84 /* TDMAttribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDMAttribute.h; sourceTree = "<group>"; };
+		EB85FCFC243E0A96001C4F84 /* TDMAttribute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDMAttribute.m; sourceTree = "<group>"; };
+		EB85FCFF243E0B35001C4F84 /* TDMStringAttribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDMStringAttribute.h; sourceTree = "<group>"; };
+		EB85FD00243E0B35001C4F84 /* TDMStringAttribute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDMStringAttribute.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +89,14 @@
 			children = (
 				EB85FCB0243E04FC001C4F84 /* TDMakeAttributed.h */,
 				EB85FCB1243E04FC001C4F84 /* Info.plist */,
+				EB85FCEF243E0645001C4F84 /* NSString+TDMakeAttributed.h */,
+				EB85FCF0243E0645001C4F84 /* NSString+TDMakeAttributed.m */,
+				EB85FCF7243E07A4001C4F84 /* TDMAttributeMaker.h */,
+				EB85FCF8243E07A4001C4F84 /* TDMAttributeMaker.m */,
+				EB85FCFB243E0A96001C4F84 /* TDMAttribute.h */,
+				EB85FCFC243E0A96001C4F84 /* TDMAttribute.m */,
+				EB85FCFF243E0B35001C4F84 /* TDMStringAttribute.h */,
+				EB85FD00243E0B35001C4F84 /* TDMStringAttribute.m */,
 			);
 			path = TDMakeAttributed;
 			sourceTree = "<group>";
@@ -93,7 +117,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB85FCF1243E0645001C4F84 /* NSString+TDMakeAttributed.h in Headers */,
+				EB85FCFD243E0A96001C4F84 /* TDMAttribute.h in Headers */,
 				EB85FCBE243E04FC001C4F84 /* TDMakeAttributed.h in Headers */,
+				EB85FD01243E0B35001C4F84 /* TDMStringAttribute.h in Headers */,
+				EB85FCF9243E07A4001C4F84 /* TDMAttributeMaker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB85FD02243E0B35001C4F84 /* TDMStringAttribute.m in Sources */,
+				EB85FCF2243E0645001C4F84 /* NSString+TDMakeAttributed.m in Sources */,
+				EB85FCFE243E0A96001C4F84 /* TDMAttribute.m in Sources */,
+				EB85FCFA243E07A4001C4F84 /* TDMAttributeMaker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
