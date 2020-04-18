@@ -13,7 +13,7 @@ Creates an attributed string as below:
 
 ```objective-c
 NSAttributedString *attributedString = [@"Sample" td_makeAttributed:^(TDMAttribute * _Nonnull attr) {
-		attr.foregroundColor([UIColor systemRedColor]).font([UIFont systemFontOfSize:24.0f]);
+    attr.foregroundColor([UIColor systemRedColor]).font([UIFont systemFontOfSize:24.0f]);
 }];
 ```
 
@@ -58,7 +58,7 @@ is equals to:
 
 ```objective-c
 NSAttributedString *attributedString = [@"Sample" td_makeAttributed:^(TDMAttribute * _Nonnull attr) {
-		attr.foregroundColor([UIColor systemRedColor]).font([UIFont systemFontOfSize:24.0f]);
+    attr.foregroundColor([UIColor systemRedColor]).font([UIFont systemFontOfSize:24.0f]);
 }];
 ```
 
