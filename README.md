@@ -9,6 +9,12 @@ Make `NSAttributedString` easier.
 
 ## Usage
 
+Import public header:
+
+```objective-c
+#import <TDMakeAttributed/TDMakeAttribute.h>
+```
+
 Creates an attributed string as below:
 
 ```objective-c
@@ -53,6 +59,12 @@ is equals to:
 > every `inRange()` call is stored in a FIFO queue, so the earlier `inRange()`  attributes might be covered by the later `inRange()` attributes. 
 
 ## 使用
+
+导入头文件:
+
+```objective-c
+#import <TDMakeAttributed/TDMakeAttribute.h>
+```
 
 创建一个 `NSAttributedString`：
 
