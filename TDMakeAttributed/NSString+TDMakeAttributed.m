@@ -7,13 +7,12 @@
 //
 
 #import "NSString+TDMakeAttributed.h"
-#import <TDMakeAttributed/TDMAttributeMaker.h>
-#import "TDMAttributeMaker.h"
+#import <TDMakeAttributed/TDMStringAttributeMaker.h>
 
 @implementation NSString (TDMakeAttributed)
 
 - (NSAttributedString *)td_makeAttributed:(void(^_Nullable)(TDMAttribute *attr))makingBlock {
-    TDMAttributeMaker *maker = [[TDMAttributeMaker alloc] initWithMakableString:self];
+    TDMStringAttributeMaker *maker = [[TDMStringAttributeMaker alloc] initWithMakableString:self];
     if (makingBlock) {
         makingBlock(maker.attr);
     }

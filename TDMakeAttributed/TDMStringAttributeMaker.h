@@ -1,5 +1,5 @@
 //
-//  TDMAttributeMaker.h
+//  TDMStringAttributeMaker.h
 //  TDMakeAttributed
 //
 //  Created by jojo on 2020/4/8.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TDMAttributeMaker : NSObject
+@interface TDMStringAttributeMaker : NSObject
 
 - (instancetype)initWithMakableString:(NSString *)string;
 
