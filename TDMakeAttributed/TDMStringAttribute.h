@@ -12,8 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TDMStringAttribute : TDMAttribute
 
-- (NSDictionary<NSAttributedStringKey,id> *)toDictionary;
-- (NSRange)activatedRange;
+- (void)enumerateRangeAndAttributesUsingBlock:(void (NS_NOESCAPE ^)(NSRange range, NSDictionary *attributes))block;
 
 @end
 

@@ -10,21 +10,39 @@
 
 @interface TDMStringAttribute ()
 @property(nonatomic, strong) NSMutableDictionary *attrDict;
+@property(nonatomic, strong) NSMutableDictionary<NSString *, NSMutableDictionary *> *attrDictRangeMap;
+@property(nonatomic, strong) NSMutableArray<NSString *> *rangeKeyQueue;
+
 @property(nonatomic, assign) NSRange range;
 @end
 
 @implementation TDMStringAttribute
 
-- (NSDictionary<NSAttributedStringKey,id> *)toDictionary {
-    return [self.attrDict copy];
+- (void)enumerateRangeAndAttributesUsingBlock:(void (NS_NOESCAPE ^)(NSRange, NSDictionary * _Nonnull))block {
+    for (NSString *rangeKey in self.rangeKeyQueue) {
+        NSDictionary *attributes = self.attrDictRangeMap[rangeKey];
+        if (attributes && block) {
+            block(NSRangeFromString(rangeKey), attributes);
+        }
+    }
 }
 
-- (NSRange)activatedRange {
-    return self.range;
+- (nullable NSMutableDictionary<NSAttributedStringKey,id> *)attrDicInRange:(NSRange)range {
+    NSString *rangeKey = NSStringFromRange(range);
+    NSMutableDictionary *attrDic = self.attrDictRangeMap[rangeKey];
+    return attrDic;
 }
 
 - (void)setRange:(NSRange)range {
     _range = range;
+    NSMutableDictionary *activeDict = [self attrDicInRange:range];
+    if (!activeDict) {
+        activeDict = [NSMutableDictionary dictionary];
+    }
+    NSString *rangeKey = NSStringFromRange(range);
+    [self.rangeKeyQueue addObject:rangeKey];
+    self.attrDictRangeMap[rangeKey] = activeDict;
+    self.attrDict = activeDict;
 }
 
 - (void)setForegroundColor:(UIColor *)color {
@@ -118,4 +136,17 @@
     return _attrDict;
 }
 
+- (NSMutableDictionary *)attrDictRangeMap {
+    if (!_attrDictRangeMap) {
+        _attrDictRangeMap = [NSMutableDictionary dictionary];
+    }
+    return _attrDictRangeMap;
+}
+
+- (NSMutableArray<NSString *> *)rangeKeyQueue {
+    if (!_rangeKeyQueue) {
+        _rangeKeyQueue = [NSMutableArray array];
+    }
+    return _rangeKeyQueue;
+}
 @end

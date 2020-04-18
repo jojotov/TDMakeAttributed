@@ -26,7 +26,11 @@
 
 
 - (NSAttributedString *)make {
-    [self.makingString addAttributes:[self.stringAttr toDictionary] range:[self.stringAttr activatedRange]];
+    [self.stringAttr enumerateRangeAndAttributesUsingBlock:^(NSRange range, NSDictionary * _Nonnull attributes) {
+        if (attributes.count) {
+            [self.makingString addAttributes:attributes range:range];
+        }
+    }];
     return [self.makingString copy];
 }
 

@@ -21,7 +21,6 @@
         self.range = value;
         return self;
     };
-
 }
 
 - (TDMAttribute *(^)(UIColor *))foregroundColor {
