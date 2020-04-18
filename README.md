@@ -17,7 +17,7 @@ NSAttributedString *attributedString = [@"Sample" td_makeAttributed:^(TDMAttribu
 }];
 ```
 
-which equals to creating a `NSAttributedString` object in normal way:
+which equals to creating a `NSAttributedString` in normal way:
 
 ```objective-c
 NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"Sample" attributes:@{
